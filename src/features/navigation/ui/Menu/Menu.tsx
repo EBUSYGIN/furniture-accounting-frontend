@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router';
 import cn from 'classnames';
+import { Icon } from '@/shared/ui';
 
 import styles from './Menu.module.css';
-import { Icon } from '@/shared/ui/Icon/Icon';
 
 export function Menu() {
   return (

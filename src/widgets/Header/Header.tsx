@@ -1,4 +1,4 @@
-import { Icon } from '@/shared/ui/Icon/Icon';
+import { Icon } from '@/shared/ui';
 import styles from './Header.module.css';
 
 export function Header() {

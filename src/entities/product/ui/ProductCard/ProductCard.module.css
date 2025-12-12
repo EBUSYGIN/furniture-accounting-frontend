@@ -1,0 +1,25 @@
+.productCard {
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info > span {
+  color: #969696;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.delete {
+  max-width: 100px;
+}
