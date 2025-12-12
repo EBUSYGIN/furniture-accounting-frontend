@@ -1,0 +1,40 @@
+.menu {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #969696;
+  margin-bottom: 18px;
+}
+
+.link {
+  border-radius: 8px;
+  padding: 24px;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: var(--secondary-black);
+  width: 100%;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.active {
+  color: var(--approved);
+  background: #ebeef0;
+}
