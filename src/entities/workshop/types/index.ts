@@ -1,3 +1,5 @@
+import type { Product } from '@/entities/product/types';
+
 export interface Workshop {
   id: number;
   productId: number;
@@ -15,4 +17,5 @@ export interface WorkshopInstance {
   workers: number;
   createdAt: string;
   updatedAt: string;
+  products: Product[];
 }

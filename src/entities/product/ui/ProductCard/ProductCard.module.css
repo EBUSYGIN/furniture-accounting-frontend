@@ -13,13 +13,13 @@
   color: #969696;
 }
 
-.actions {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
 .delete {
   max-width: 100px;
+}
+
+.actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
 }

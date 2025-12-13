@@ -7,10 +7,8 @@
   --secondary-base: #e7e7ff;
   --success: #08875d;
   --success-base: #edfdf8;
-  --warning: #b25e09;
   --warning-base: #fff8eb;
   --warning: #e02d3c;
-  --warning-base: #fef1f2;
   --body-background: #fff;
   --neutral-100: #f8f9fc;
   --neutral-200: #f1f3f9;
@@ -18,4 +16,5 @@
   --neutral-line-200: #3f444d;
   --approved: #0085ff;
   --body-color-2: #585757;
+  --blue: #093e8c;
 }

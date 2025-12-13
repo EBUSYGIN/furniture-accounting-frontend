@@ -15,8 +15,8 @@
 }
 
 .primary {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--approved);
+  color: var(--white);
 }
 
 .boxed {
@@ -70,7 +70,8 @@
   color: var(--white);
 }
 
-.blue:hover {
+.primary:hover,
+.danger:hover {
   opacity: 0.7;
 }
 

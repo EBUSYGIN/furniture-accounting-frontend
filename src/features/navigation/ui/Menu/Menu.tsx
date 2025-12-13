@@ -28,6 +28,16 @@ export function Menu() {
           <Icon.Workshop />
           Цеха
         </NavLink>
+
+        <NavLink
+          className={({ isActive }) =>
+            cn(styles.link, { [styles.active]: isActive })
+          }
+          to='/calculator'
+        >
+          <Icon.OrderCalc />
+          Калькулятор
+        </NavLink>
       </ul>
     </nav>
   );

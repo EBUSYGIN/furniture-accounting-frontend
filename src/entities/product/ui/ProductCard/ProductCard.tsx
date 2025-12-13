@@ -1,4 +1,3 @@
-import { Link } from 'react-router';
 import { memo } from 'react';
 import { Button, Card, Title } from '@/shared/ui';
 import type { ProductCardProps } from './ProductCard.types';
@@ -25,25 +24,33 @@ export const ProductCard = memo(
     };
 
     return (
-      <Link to={`product/${id}`}>
-        <Card className={styles.productCard}>
-          <div className={styles.info}>
-            <Title tag={'h6'} size={'l'}>
-              {name}
-            </Title>
-            <span>Артикль: {article}</span>
-            <span>
-              Мин. цена:{' '}
-              {new Intl.NumberFormat('ru-RU', {
-                style: 'currency',
-                currency: 'RUB',
-              }).format(minPrice)}
-            </span>
-            <span>Материал: {material}</span>
-          </div>
+      <Card className={styles.productCard}>
+        <div className={styles.info}>
+          <Title tag={'h6'} size={'l'}>
+            {name}
+          </Title>
+          <span>Артикль: {article}</span>
+          <span>
+            Мин. цена:{' '}
+            {new Intl.NumberFormat('ru-RU', {
+              style: 'currency',
+              currency: 'RUB',
+            }).format(minPrice)}
+          </span>
+          <span>Материал: {material}</span>
+        </div>
 
+        <div>
+          <span>Время на производство: {productionTime} час</span>
           <div className={styles.actions}>
-            Время на производство: {productionTime} час
+            <Button
+              size='s'
+              typeOf='link'
+              path={`/product/${id}`}
+              appearance='ghost-blue'
+            >
+              Изменить
+            </Button>
             <Button
               appearance='danger'
               size='s'
@@ -53,8 +60,8 @@ export const ProductCard = memo(
               Удалить
             </Button>
           </div>
-        </Card>
-      </Link>
+        </div>
+      </Card>
     );
   }
 );

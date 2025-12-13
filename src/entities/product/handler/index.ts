@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { ProductsAPI } from '../api';
-import type { Product } from '../types';
+import type { CreateUpdateProduct, Product, Type } from '../types';
 
 const getAllProducts = async (): Promise<Product[]> => {
   try {
-    const serverResponse = await axios.get(ProductsAPI.getAll());
+    const serverResponse = await axios.get(ProductsAPI.default());
     const products: Product[] = serverResponse.data.products;
     return products;
   } catch (e) {
@@ -30,7 +30,42 @@ const deleteProduct = async (id: number) => {
   }
 };
 
+const getAllProductTypes = async (): Promise<Type[]> => {
+  try {
+    const serverResponse = await axios.get(ProductsAPI.getProductTypes());
+    const types: Type[] = serverResponse.data.productTypes;
+    return types;
+  } catch (e) {
+    console.log('Ошибка загрузки типов');
+    if (e instanceof Error) {
+      throw e;
+    }
+
+    throw new Error('Ошибка загрузки типов');
+  }
+};
+
+const createUpdateProduct = async (
+  data: CreateUpdateProduct,
+  productId?: string
+): Promise<boolean> => {
+  const method = productId ? 'put' : 'post';
+  try {
+    await axios[method](ProductsAPI.default(productId), data);
+    return true;
+  } catch (e) {
+    console.log('Ошибка создания продукта');
+    if (e instanceof Error) {
+      throw e;
+    }
+
+    throw new Error('Ошибка создания продукта');
+  }
+};
+
 export const ProductsHandler = {
   getAllProducts,
   deleteProduct,
+  getAllProductTypes,
+  createUpdateProduct,
 };
